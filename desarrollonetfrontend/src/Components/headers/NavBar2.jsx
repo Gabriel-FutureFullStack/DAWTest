@@ -25,20 +25,30 @@ export default function NavBar2() {
   return (
     <React.Fragment>
       <Box 
+        className="navbar" // Añadimos la clase "navbar"
         sx={{
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          backgroundColor: '#141414', // Dark background color
+          backgroundColor: '#141414', // Fondo oscuro
           padding: '10px 20px',
-          color: '#fff' // White text color
+          color: '#fff', // Texto blanco
+          boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.7)', // Sombra difuminada
+          backdropFilter: 'blur(10px)', // Efecto de desenfoque en el fondo
+          background: 'rgba(20, 20, 20, 0.85)', // Fondo con transparencia
+          borderBottom: '1px solid rgba(255, 255, 255, 0.1)', // Línea inferior sutil
+          position: 'fixed',
+          top: 0,
+          width: '100%',
+          zIndex: 1000,
         }}
       >
         {/* Sección izquierda con el logo y los links */}
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" 
-               alt="Netflix Logo" 
-               style={{ height: '32px', marginRight: '20px' }} 
+          <img 
+            src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" 
+            alt="Netflix Logo" 
+            style={{ height: '32px', marginRight: '20px' }} 
           />
           <Typography sx={{ fontWeight: 'bold', fontSize: '1.2rem', marginRight: '20px' }}>Contact</Typography>
           <Typography sx={{ fontWeight: 'bold', fontSize: '1.2rem' }}>Profile</Typography>
@@ -51,13 +61,13 @@ export default function NavBar2() {
             size="small"
             sx={{
               ml: 2,
-              color: '#fff' // White icon color
+              color: '#fff' // Color blanco del icono
             }}
             aria-controls={open ? 'account-menu' : undefined}
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >
-            <Avatar sx={{ width: 32, height: 32, border: '2px solid #e50914' }}>M</Avatar> {/* Add a red border */}
+            <Avatar sx={{ width: 32, height: 32, border: '2px solid #e50914' }}>M</Avatar> {/* Borde rojo */}
           </IconButton>
         </Tooltip>
       </Box>
@@ -74,8 +84,8 @@ export default function NavBar2() {
             overflow: 'visible',
             filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
             mt: 1.5,
-            backgroundColor: '#333', // Dark background color for the menu
-            color: '#fff', // White text color
+            backgroundColor: '#333', // Fondo oscuro para el menú
+            color: '#fff', // Color de texto blanco
             '& .MuiAvatar-root': {
               width: 32,
               height: 32,
@@ -95,7 +105,7 @@ export default function NavBar2() {
               zIndex: 0,
             },
             '& .MuiMenuItem-root:hover': {
-              backgroundColor: '#e50914', // Red hover effect
+              backgroundColor: '#e50914', // Efecto hover rojo
             }
           },
         }}

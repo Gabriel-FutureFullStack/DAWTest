@@ -6,8 +6,8 @@ function ObtenerConexion(){
     return new Promise((resolve, reject)=>{
         const connection = mysql.createConnection({
             host: "localhost",
-            user: "Gabriel",
-            password: "73150977",
+            user: "gvalera",
+            password: "01234567",
             database: "netflix03"
         });
         //Trata de conectarse mediante el connection

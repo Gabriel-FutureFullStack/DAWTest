@@ -7,6 +7,8 @@ function App() {
   return (
     <div className="app-container">
       <NavBar2 />
+      <br/>
+      <br/>
       <div className="content-container">
         <ObtenerHistorial />
       </div>
