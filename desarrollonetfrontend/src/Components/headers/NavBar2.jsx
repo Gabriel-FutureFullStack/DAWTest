@@ -11,34 +11,47 @@ import Tooltip from '@mui/material/Tooltip';
 import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
-import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 export default function NavBar2() {
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const open = Boolean(anchorEl);
-    const handleClick = (event) => {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
     setAnchorEl(null);
   };
+
   return (
     <React.Fragment>
       <Box 
-      className="d-flex justify-content-between" 
-      sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
-        <Typography sx={{ minWidth: 100 }}>Contact</Typography>
-        <Typography sx={{ minWidth: 100 }}>Profile</Typography>
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          backgroundColor: '#141414', // Dark background color
+          padding: '10px 20px',
+          color: '#fff' // White text color
+        }}
+      >
+        
+          <Typography sx={{ fontWeight: 'bold', fontSize: '1.2rem' }}>Contact</Typography>
+          <Typography sx={{ fontWeight: 'bold', fontSize: '1.2rem' }}>Profile</Typography>
+        
+        
         <Tooltip title="Account settings">
           <IconButton
             onClick={handleClick}
             size="small"
-            sx={{ ml: 2 }}
+            sx={{
+              ml: 2,
+              color: '#fff' // White icon color
+            }}
             aria-controls={open ? 'account-menu' : undefined}
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >
-            <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
+            <Avatar sx={{ width: 32, height: 32, border: '2px solid #e50914' }}>M</Avatar> {/* Add a red border */}
           </IconButton>
         </Tooltip>
       </Box>
@@ -54,6 +67,8 @@ export default function NavBar2() {
             overflow: 'visible',
             filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
             mt: 1.5,
+            backgroundColor: '#333', // Dark background color for the menu
+            color: '#fff', // White text color
             '& .MuiAvatar-root': {
               width: 32,
               height: 32,
@@ -68,10 +83,13 @@ export default function NavBar2() {
               right: 14,
               width: 10,
               height: 10,
-              bgcolor: 'background.paper',
+              bgcolor: '#333',
               transform: 'translateY(-50%) rotate(45deg)',
               zIndex: 0,
             },
+            '& .MuiMenuItem-root:hover': {
+              backgroundColor: '#e50914', // Red hover effect
+            }
           },
         }}
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
@@ -86,19 +104,19 @@ export default function NavBar2() {
         <Divider />
         <MenuItem onClick={handleClose}>
           <ListItemIcon>
-            <PersonAdd fontSize="small" />
+            <PersonAdd fontSize="small" sx={{ color: '#fff' }} />
           </ListItemIcon>
           Add another account
         </MenuItem>
         <MenuItem onClick={handleClose}>
           <ListItemIcon>
-            <Settings fontSize="small" />
+            <Settings fontSize="small" sx={{ color: '#fff' }} />
           </ListItemIcon>
           Settings
         </MenuItem>
         <MenuItem onClick={handleClose}>
           <ListItemIcon>
-            <Logout fontSize="small" />
+            <Logout fontSize="small" sx={{ color: '#fff' }} />
           </ListItemIcon>
           Logout
         </MenuItem>
