@@ -1,20 +1,15 @@
-
 import React from 'react';
 import './App.css';
 import ObtenerHistorial from './Components/TableDatos/ObtenerHistorial';  // Importa como exportación por defecto
-//import HeaderNavBar from './Components/headers/HeaderNavBar'
 import NavBar2 from './Components/headers/NavBar2';
 
 function App() {
   return (
-    <div >
-      
-      <div className='container'>
-      <NavBar2/>
+    <div className="app-container">
+      <NavBar2 />
+      <div className="content-container">
         <ObtenerHistorial />
       </div>
-        
-      
     </div>
   );
 }

@@ -34,11 +34,17 @@ export default function NavBar2() {
           color: '#fff' // White text color
         }}
       >
-        
-          <Typography sx={{ fontWeight: 'bold', fontSize: '1.2rem' }}>Contact</Typography>
+        {/* Sección izquierda con el logo y los links */}
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" 
+               alt="Netflix Logo" 
+               style={{ height: '32px', marginRight: '20px' }} 
+          />
+          <Typography sx={{ fontWeight: 'bold', fontSize: '1.2rem', marginRight: '20px' }}>Contact</Typography>
           <Typography sx={{ fontWeight: 'bold', fontSize: '1.2rem' }}>Profile</Typography>
-        
-        
+        </Box>
+
+        {/* Icono de usuario a la derecha */}
         <Tooltip title="Account settings">
           <IconButton
             onClick={handleClick}
@@ -55,6 +61,7 @@ export default function NavBar2() {
           </IconButton>
         </Tooltip>
       </Box>
+
       <Menu
         anchorEl={anchorEl}
         id="account-menu"

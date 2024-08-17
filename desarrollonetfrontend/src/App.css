@@ -9,8 +9,25 @@
   color: white;
 }
 
-/* App.css */
-
-table{
-  background-color: aqua;
+/* Content container */
+.content-container {
+  padding: 20px; /* Espaciado alrededor del contenido */
+  max-width: 1200px; /* Ancho máximo del contenido */
+  margin: 0 auto; /* Centrado horizontal */
 }
+
+nav {
+  position: fixed; /* Navbar fijo en la parte superior */
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que el navbar esté por encima del contenido */
+}
+
+/* App container */
+.app-container {
+  background-color: #141414; /* Fondo oscuro global */
+  color: #ffffff; /* Color de texto global */
+  min-height: 100vh; /* Asegura que la aplicación ocupe toda la pantalla */
+
+}
+
