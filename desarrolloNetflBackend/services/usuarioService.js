@@ -17,6 +17,7 @@ async function ObtenerUsuarios() {
                 } else {
                     resolve(filas); // Resuelva la promesa con las filas extraídas de la base de datos.
                 }
+                
             });
         });
         

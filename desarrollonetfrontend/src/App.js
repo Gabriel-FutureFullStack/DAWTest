@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
-import ObtenerHistorial from './Components/TableDatos/ObtenerHistorial';  // Importa como exportación por defecto
+import ObtenerHistorial2 from './Components/TableDatos/ObtenerHistorial2';  
 import NavBar2 from './Components/headers/NavBar2';
+import ObtenerHistorial from './Components/TableDatos/ObtenerHistorial';  
+
 
 function App() {
   return (
@@ -10,7 +12,8 @@ function App() {
       <br/>
       <br/>
       <div className="content-container">
-        <ObtenerHistorial />
+        <ObtenerHistorial/>
+        <ObtenerHistorial2/>
       </div>
     </div>
   );
