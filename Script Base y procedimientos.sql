@@ -385,8 +385,31 @@ DELIMITER ;
 
 CALL DeleteAllHistorialVisto(1);
 
+DELIMITER //    
+CREATE PROCEDURE ObtenerHistorialCompleto()
+BEGIN        
+ SELECT 
+        hv.historialID, 
+        p.nombre AS nombrePerfil, 
+        COALESCE(m.titulo, CONCAT(s.titulo, ' - T', t.numeroTemporada, 'E', e.numeroEpisodio)) AS tituloContenido,
+        hv.fechaVisto,
+        hv.tiempoVisto
+    FROM 
+        historial_visto hv
+    LEFT JOIN 
+        perfil p ON hv.perfilID = p.perfilID
+    LEFT JOIN 
+        pelicula m ON hv.peliculaID = m.peliculaID
+    LEFT JOIN 
+        episodio e ON hv.episodioID = e.episodioID
+    LEFT JOIN 
+        temporada t ON e.temporadaID = t.temporadaID
+    LEFT JOIN 
+        serie s ON t.serieID = s.serieID;   
+END//
 
-
+DELIMITER ;     
+CALL ObtenerHistorialCompleto();
 
 
 
