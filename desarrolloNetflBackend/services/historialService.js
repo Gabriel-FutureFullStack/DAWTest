@@ -3,7 +3,14 @@ const { ObtenerConexion } = require('../database/conexion');
 async function ObtenerHistorial() {
     try {
         const connection = await ObtenerConexion();
-        const consulta = 'SELECT * FROM historial_visto';
+        const consulta = `
+            SELECT hv.historialID, hv.perfilID, p.nombre AS perfilNombre, 
+                   hv.peliculaID, pel.titulo AS peliculaNombre, hv.serieID, 
+                   hv.episodioID, hv.fechaVisto, hv.tiempoVisto
+            FROM historial_visto hv
+            LEFT JOIN pelicula pel ON hv.peliculaID = pel.peliculaID
+            LEFT JOIN perfil p ON hv.perfilID = p.perfilID
+        `;
 
         return new Promise((resolve, reject) => {
             connection.query(consulta, (err, filas) => {

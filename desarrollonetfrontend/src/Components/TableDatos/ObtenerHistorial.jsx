@@ -21,21 +21,22 @@ const ObtenerHistorial = () => {
             });
     }, []);
 
-    if (loading) {
-        return (
+    if (loading){
+        return(
             <Box className="loading-container">
-                <CircularProgress color="inherit" />
-                <Typography variant="h6">Cargando historial...</Typography>
-            </Box>
+                    <CircularProgress color="inherit" />
+                    <Typography variant="h6">Cargando historial...</Typography>
+                </Box>
         );
-    }
-    if (error) {
+    } 
+ 
+    if (error){
         return (
             <Box className="error-container">
                 <Typography variant="h6">Error: {error.message}</Typography>
             </Box>
         );
-    }
+    } 
 
     return (
         <Box className="historial-container">
@@ -45,30 +46,30 @@ const ObtenerHistorial = () => {
             {data.length > 0 ? (
                 <TableContainer component={Paper} className="historial-table-container">
                     <Table className="historial-table">
-                        <TableHead>
-                            <TableRow>
-                                <TableCell className="historial-header">Historial ID</TableCell>
-                                <TableCell className="historial-header">Perfil ID</TableCell>
-                                <TableCell className="historial-header">Pelicula ID</TableCell>
-                                <TableCell className="historial-header">Serie ID</TableCell>
-                                <TableCell className="historial-header">Capítulo ID</TableCell>
-                                <TableCell className="historial-header">Fecha Visto</TableCell>
-                                <TableCell className="historial-header">Tiempo Visto</TableCell>
-                            </TableRow>
-                        </TableHead>
-                        <TableBody>
-                            {data.map(item => (
-                                <TableRow key={item.historialID} className="historial-row">
-                                    <TableCell className="historial-cell">{item.historialID}</TableCell>
-                                    <TableCell className="historial-cell">{item.perfilID}</TableCell>
-                                    <TableCell className="historial-cell">{item.peliculaID}</TableCell>
-                                    <TableCell className="historial-cell">{item.serieID || 'N/A'}</TableCell>
-                                    <TableCell className="historial-cell">{item.episodioID || 'N/A'}</TableCell>
-                                    <TableCell className="historial-cell">{new Date(item.fechaVisto).toLocaleDateString()}</TableCell>
-                                    <TableCell className="historial-cell">{item.tiempoVisto || 'N/A'}</TableCell>
-                                </TableRow>
-                            ))}
-                        </TableBody>
+                    <TableHead>
+                    <TableRow>
+                            <TableCell className="historial-header">Historial ID</TableCell>
+                            <TableCell className="historial-header">Perfil</TableCell>
+                            <TableCell className="historial-header">Película</TableCell>
+                            <TableCell className="historial-header">Serie ID</TableCell>
+                            <TableCell className="historial-header">Capítulo ID</TableCell>
+                            <TableCell className="historial-header">Fecha Visto</TableCell>
+                            <TableCell className="historial-header">Tiempo Visto</TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        {data.map(item => (
+                            <TableRow  key={item.historialID} className="historial-row">
+                                <TableCell className="historial-cell" >{item.historialID}</TableCell >
+                                <TableCell className="historial-cell" >{item.perfilNombre}</TableCell > {/* Mostrar el nombre del perfil */}
+                                <TableCell className="historial-cell" >{item.peliculaNombre || 'N/A'}</TableCell > {/* Mostrar el nombre de la película */}
+                                <TableCell className="historial-cell" >{item.serieID || 'N/A'}</TableCell >
+                                <TableCell className="historial-cell" >{item.episodioID || 'N/A'}</TableCell >
+                                <TableCell className="historial-cell" >{new Date(item.fechaVisto).toLocaleDateString()}</TableCell >
+                                <TableCell className="historial-cell" >{item.tiempoVisto || 'N/A'}</TableCell >
+                            </TableRow >
+                        ))}
+                    </TableBody>
                     </Table>
                 </TableContainer>
             ) : (

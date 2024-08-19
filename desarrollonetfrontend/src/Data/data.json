@@ -1,44 +1,20 @@
 [
     {
-      "historialID": 1,
-      "nombrePerfil": "John Profile",
-      "tituloContenido": "Movie A",
-      "fechaVisto": "2024-02-22T05:00:00.000Z",
-      "tiempoVisto": null
+        "historialID": 1,
+        "perfilID": 1,
+        "peliculaID": 1,
+        "serieID": null,
+        "episodioID": null,
+        "fechaVisto": "11-08-2024",
+        "tiempoVisto": "0:30:30"
     },
     {
-      "historialID": 2,
-      "nombrePerfil": "John Profile",
-      "tituloContenido": "Movie B",
-      "fechaVisto": "2024-02-22T05:00:00.000Z",
-      "tiempoVisto": null
-    },
-    {
-      "historialID": 3,
-      "nombrePerfil": "John Profile",
-      "tituloContenido": "Movie C",
-      "fechaVisto": "2024-03-27T05:00:00.000Z",
-      "tiempoVisto": null
-    },
-    {
-      "historialID": 4,
-      "nombrePerfil": "John Profile",
-      "tituloContenido": "Movie D",
-      "fechaVisto": "2024-04-12T05:00:00.000Z",
-      "tiempoVisto": null
-    },
-    {
-      "historialID": 5,
-      "nombrePerfil": "John Profile",
-      "tituloContenido": "Movie E",
-      "fechaVisto": "2024-06-01T05:00:00.000Z",
-      "tiempoVisto": null
-    },
-    {
-      "historialID": 6,
-      "nombrePerfil": "Jane Profile",
-      "tituloContenido": "Series B - T1E1",
-      "fechaVisto": "2024-06-01T05:00:00.000Z",
-      "tiempoVisto": "00:12:00"
+        "historialID": 2,
+        "perfilID": 1,
+        "peliculaID": 2,
+        "serieID": null,
+        "episodioID": null,
+        "fechaVisto": "12-08-2024",
+        "tiempoVisto": "1:30:30"
     }
-  ]
+]

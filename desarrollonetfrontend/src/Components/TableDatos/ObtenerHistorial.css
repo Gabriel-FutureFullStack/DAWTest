@@ -1,11 +1,9 @@
 /* Historial de Usuario - Estilos similares a Netflix */
 
 .historial-container {
-    padding: 20px;
     background-color: #141414;
     color: #ffffff;
-    min-height: calc(100vh - 64px); /* Ajuste la altura restando la del navbar */
-    box-sizing: border-box;
+    padding: 20px;
     border-radius: 8px;
     margin: 20px;
     max-width: 1200px;
@@ -14,13 +12,14 @@
 }
 
 .historial-title {
+    text-align: center;
+    color: #e50914;
     margin-bottom: 20px;
-    color: #e50914; /* Título en rojo */
 }
 
 .historial-table-container {
-    background-color: #2c2c2c; /* Fondo oscuro de la tabla */
-    border-radius: 8px;
+    
+    border-radius: 8px !important;
 }
 
 .historial-table {
@@ -28,18 +27,20 @@
 }
 
 .historial-header {
-    color: #e50914;
-    font-weight: bold;
-    border-bottom: 2px solid #e50914;
+    background-color: #2c2c2c !important;
+    color: #e50914 !important;
+    font-weight: bold !important;
+    border-bottom: 2px solid #e50914 !important;
 }
 
 .historial-cell {
-    color: #ffffff;
-    border-bottom: 1px solid #444444;
+    background-color: #f4ecec !important;
+    color: #171616 !important;
+    border-bottom: 1px solid #444444 !important;
 }
 
 .historial-row:hover {
-    background-color: #eba9a9;
+    background-color: #eba9a9 !important;
 }
 
 .loading-container,
@@ -49,5 +50,13 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    
+    color: #ffffff;
 }
+
+.IconCont {
+    background-color:#171616 ;
+    padding-right: 30px;
+    border:#171616 ;
+}
+
+
