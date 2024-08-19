@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import ObtenerHistorial from './Components/TableDatos/ObtenerHistorial';  // Importa como exportación por defecto
+import ObtenerHistorial from './Components/TableDatos/ObtenerHistorial';  
 import NavBar2 from './Components/headers/NavBar2';
 
 function App() {

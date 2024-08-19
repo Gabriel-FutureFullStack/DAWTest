@@ -9,25 +9,23 @@
   color: white;
 }
 
-/* Content container */
 .content-container {
-  padding: 20px; /* Espaciado alrededor del contenido */
-  max-width: 1200px; /* Ancho máximo del contenido */
-  margin: 0 auto; /* Centrado horizontal */
+  padding: 20px; 
+  max-width: 1200px;
+  margin: 0 auto; 
 }
 
 nav {
-  position: fixed; /* Navbar fijo en la parte superior */
+  position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000; /* Asegura que el navbar esté por encima del contenido */
+  z-index: 1000; 
 }
 
-/* App container */
 .app-container {
-  background-color: #141414; /* Fondo oscuro global */
-  color: #ffffff; /* Color de texto global */
-  min-height: 100vh; /* Asegura que la aplicación ocupe toda la pantalla */
+  background-color: #141414;
+  color: #ffffff; 
+  min-height: 100vh;
 
 }
 
