@@ -1,4 +1,4 @@
-/* Historial de Usuario - Estilos similares a Netflix */
+
 
 .historial-container {
     background-color: #141414;
@@ -15,6 +15,8 @@
     text-align: center;
     color: #e50914;
     margin-bottom: 20px;
+    
+    
 }
 
 .historial-table-container {
@@ -31,12 +33,14 @@
     color: #e50914 !important;
     font-weight: bold !important;
     border-bottom: 2px solid #e50914 !important;
+
 }
 
 .historial-cell {
     background-color: #f4ecec !important;
     color: #171616 !important;
     border-bottom: 1px solid #444444 !important;
+
 }
 
 .historial-row:hover {

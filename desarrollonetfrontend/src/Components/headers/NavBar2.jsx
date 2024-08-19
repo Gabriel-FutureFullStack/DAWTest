@@ -25,18 +25,18 @@ export default function NavBar2() {
   return (
     <React.Fragment>
       <Box 
-        className="navbar" // Añadimos la clase "navbar"
+        className="navbar"
         sx={{
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          backgroundColor: '#141414', // Fondo oscuro
+          backgroundColor: '#141414',
           padding: '10px 20px',
-          color: '#fff', // Texto blanco
-          boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.7)', // Sombra difuminada
-          backdropFilter: 'blur(10px)', // Efecto de desenfoque en el fondo
-          background: 'rgba(20, 20, 20, 0.85)', // Fondo con transparencia
-          borderBottom: '1px solid rgba(255, 255, 255, 0.1)', // Línea inferior sutil
+          color: '#fff',
+          boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.7)',
+          backdropFilter: 'blur(10px)',
+          background: 'rgba(20, 20, 20, 0.85)',
+          borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
           position: 'fixed',
           top: 0,
           width: '100%',
@@ -55,20 +55,19 @@ export default function NavBar2() {
         </Box>
 
         {/* Icono de usuario a la derecha */}
-        <Tooltip title="Account settings" class="IconCont">
+        <Tooltip title="Account settings">
           <IconButton
             onClick={handleClick}
             size="small"
             sx={{
               ml: 2,
-              color: '#fff' // Color blanco del icono
-            
+              color: '#fff',
             }}
             aria-controls={open ? 'account-menu' : undefined}
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >
-            <Avatar sx={{ width: 32, height: 32, border: '2px solid #e50914' }}>M</Avatar> {/* Borde rojo */}
+            <Avatar sx={{ width: 32, height: 32, border: '2px solid #e50914' }}>M</Avatar>
           </IconButton>
         </Tooltip>
       </Box>
@@ -85,8 +84,8 @@ export default function NavBar2() {
             overflow: 'visible',
             filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
             mt: 1.5,
-            backgroundColor: '#333', // Fondo oscuro para el menú
-            color: '#fff', // Color de texto blanco
+            backgroundColor: '#333',
+            color: '#fff',
             '& .MuiAvatar-root': {
               width: 32,
               height: 32,
@@ -106,7 +105,7 @@ export default function NavBar2() {
               zIndex: 0,
             },
             '& .MuiMenuItem-root:hover': {
-              backgroundColor: '#e50914', // Efecto hover rojo
+              backgroundColor: '#e50914',
             }
           },
         }}

@@ -6,11 +6,17 @@ async function ObtenerHistorial() {
         const consulta = `
             SELECT hv.historialID, hv.perfilID, p.nombre AS perfilNombre, 
                    hv.peliculaID, pel.titulo AS peliculaNombre, hv.serieID, 
-                   hv.episodioID, hv.fechaVisto, hv.tiempoVisto
+                   hv.episodioID, hv.fechaVisto, hv.tiempoVisto, s.titulo AS serieNombre,
+                   e.titulo AS episodioNombre
+
             FROM historial_visto hv
             LEFT JOIN pelicula pel ON hv.peliculaID = pel.peliculaID
             LEFT JOIN perfil p ON hv.perfilID = p.perfilID
+            LEFT JOIN serie s ON hv.serieID = s.serieID
+            LEFT JOIN episodio e ON hv.episodioID = e.episodioID
+            
         `;
+
 
         return new Promise((resolve, reject) => {
             connection.query(consulta, (err, filas) => {
