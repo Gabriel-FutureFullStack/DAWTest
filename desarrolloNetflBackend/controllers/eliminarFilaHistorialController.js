@@ -1,7 +1,7 @@
 const { eliminarFilaHistorialService } = require('../services/eliminarFilaHistorialService');
 
 async function eliminarFilaHistorialController(req, res) {
-    const { historialID } = req.params; // Capturamos el historialID desde los parámetros de la URL
+    const { historialID } = req.params; 
 
     try {
         const resultado = await eliminarFilaHistorialService(historialID);

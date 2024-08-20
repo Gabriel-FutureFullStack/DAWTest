@@ -75,8 +75,8 @@ const ObtenerHistorial = () => {
                                 </TableRow>
                             </TableHead>
                             <TableBody>
-                                {data.map(item => (
-                                    <TableRow key={item.historialID} className="historial-row">
+                                {data.map((item, index) => (
+                                    <TableRow key={item.historialID || index} className="historial-row">
                                         <TableCell className="historial-cell">{item.historialID}</TableCell>
                                         <TableCell className="historial-cell">{item.perfilNombre}</TableCell>
                                         <TableCell className="historial-cell">{item.peliculaNombre || '-'}</TableCell>

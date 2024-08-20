@@ -6,7 +6,6 @@ const cors = require('cors');
 const { ObtenerHistorialController } = require('./controllers/historialController');
 const { eliminarHistorialController } = require('./controllers/eliminarHistorialController');
 const { historialActualizarController } = require('./controllers/historialActualizarController');
-const { actualizarTiempoVistoController } = require('./controllers/actualizarTiempoVistoController');
 const { eliminarFilaHistorialController } = require('./controllers/eliminarFilaHistorialController');
 
 
@@ -23,7 +22,6 @@ const PORT = process.env.PORT || 4000;
 app.get('/ObtenerHistorial', ObtenerHistorialController);
 app.delete('/eliminarHistorial', eliminarHistorialController); 
 app.post('/actualizarHistorial', historialActualizarController);
-app.put('/actualizarTiempoVisto', actualizarTiempoVistoController);
 app.delete('/eliminarHistorial/:historialID', eliminarFilaHistorialController);
 
 
